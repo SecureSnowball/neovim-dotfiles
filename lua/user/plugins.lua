@@ -18,6 +18,9 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" } -- a bunch of snippets to use
 
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim"
+
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
 
