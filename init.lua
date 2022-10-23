@@ -3,8 +3,5 @@ require "user.keymaps"
 require "user.plugins"
 require "user.colorscheme"
 require "user.cmp"
-require "user.gitsigns"
-require "user.treesitter"
-require "user.nvim_tree"
 require "user.lsp"
 

@@ -1,12 +1,17 @@
 -- Keymaps
-local opts = { noremap = true, silent = true }
+local opts = {
+    noremap = true,
+    silent = true
+}
 
-local term_opts = { silent = true }
+local term_opts = {
+    silent = true
+}
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.localleade = " "
@@ -53,3 +58,4 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Plugins shortcuts
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
+keymap("n", "<C-t>", "<cmd>ToggleTerm<cr>", opts)
