@@ -1,4 +1,3 @@
--- Plugins
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/popup.nvim'
@@ -39,7 +38,12 @@ return require('packer').startup(function(use)
             require('mason').setup()
         end
     } -- simple to use language server installer
-    use "williamboman/mason-lspconfig.nvim"
+    use { "williamboman/mason-lspconfig.nvim", config = function()
+	    require('mason-lspconfig').setup({
+		    ensure_installed = { "sumneko_lua", "rust_analyzer" },
+		    automatic_installation = false
+	    })
+    end}
     use {
         'jose-elias-alvarez/null-ls.nvim',
         config = function()
